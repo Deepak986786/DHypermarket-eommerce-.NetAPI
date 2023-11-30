@@ -1,14 +1,5 @@
-public interface INoSqlRepository
+public interface IProductService
 {
-    // For User Collection
-    Task<User> GetByIdAsync(string id);
-    Task<List<User>> GetAllAsync();
-    Task<User> AddAsync(User user);
-    Task<User> UpdateAsync(User user);
-    Task DeleteAsync(string id);
-    User GetUserByEmail(string email);
-
-    // For Product Collection
     Task<List<Product>> GetAllProductsAsync();
     Task<Product> GetProductByIdAsync(string id);
     Task AddProductAsync(Product product);
@@ -17,5 +8,4 @@ public interface INoSqlRepository
     Task DeleteProductByIdAsync(string id);
     Task<List<Product>> GetProductsByCategory(string category);
     Task<List<string>> GetCategoryList();
-
 }
